@@ -2,6 +2,13 @@
 var audio = document.querySelector("audio");
 var lyrics = document.querySelector("#lyrics");
 
+// Oculta suavemente los marcos que aun no tienen una foto colocada.
+document.querySelectorAll(".memory-card img").forEach((image) => {
+  const showEmptyCard = () => image.closest(".memory-card").classList.add("memory-card--empty");
+  image.addEventListener("error", showEmptyCard);
+  if (image.complete && image.naturalWidth === 0) showEmptyCard();
+});
+
 // Array de objetos que contiene cada línea y su tiempo de aparición en segundos
 var lyricsData = [
   { text: "Love.", time: 10 },

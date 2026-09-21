@@ -6,22 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
     <link rel="icon" href="flowers.png" type="image/x-icon" />
-    <title>Flower</title>
+    <title>Flores para ti</title>
   </head>
   <body class="container">
-    <audio controls autoplay> <source src="Alec Benjamin - Let Me Down Slowly  Español.mp4" type="audio/mp4"></audio>
+    <div class="ambient-glow" aria-hidden="true"></div>
+    <div class="music-player">
+      <span class="music-player__dot" aria-hidden="true"></span>
+      <span>Una canción para acompañar este momento</span>
+      <audio controls autoplay loop aria-label="Música de fondo">
+        <source src="Alec Benjamin - Let Me Down Slowly  Español.mp4" type="audio/mp4" />
+      </audio>
+    </div>
     <div id="lyrics">
      
     </div>
-     <!-- 👇 TEXTO DE ARRIBA -->
-  <div class="texto-arriba">
-    <h1>Estas flores amarillas son para ti, mi amor. 🌻❤️</h1>
+  <header class="texto-arriba">
+    <span class="message-kicker">Para alguien muy especial</span>
+    <h1>Flores amarillas para ti</h1>
 
     <p>
-      Aunque no pueda estar a tu lado estos días,
-      quería hacerte llegar un poquito de mi cariño. 💛
+      Aunque hoy no pueda estar a tu lado, cada pétalo lleva un poquito de mi cariño.
     </p>
-  </div>
+  </header>
+    <section class="memory-gallery" aria-label="Nuestros recuerdos">
+      <div class="memory-gallery__side memory-gallery__side--left">
+        <figure class="memory-card memory-card--1"><img src="fotos/foto-01.jpg" alt="Nuestro recuerdo 1" /><figcaption>Un momento contigo</figcaption></figure>
+        <figure class="memory-card memory-card--2"><img src="fotos/foto-02.jpg" alt="Nuestro recuerdo 2" /><figcaption>Mi lugar favorito</figcaption></figure>
+        <figure class="memory-card memory-card--3"><img src="fotos/foto-03.jpg" alt="Nuestro recuerdo 3" /><figcaption>Siempre tú</figcaption></figure>
+      </div>
+      <div class="memory-gallery__side memory-gallery__side--right">
+        <figure class="memory-card memory-card--4"><img src="fotos/foto-04.jpg" alt="Nuestro recuerdo 4" /><figcaption>Sonrisas que adoro</figcaption></figure>
+        <figure class="memory-card memory-card--5"><img src="fotos/foto-05.jpg" alt="Nuestro recuerdo 5" /><figcaption>Un recuerdo bonito</figcaption></figure>
+        <figure class="memory-card memory-card--6"><img src="fotos/foto-06.jpg" alt="Nuestro recuerdo 6" /><figcaption>Mi persona especial</figcaption></figure>
+      </div>
+    </section>
     <div class="night"></div>
     <div class="flowers">
       <div class="flower flower--1">
@@ -332,12 +350,12 @@
         </div>
       </div>
     </div>
-    <div class="texto-abajo">
+    <footer class="texto-abajo">
+    <span class="message-kicker">Con todo mi cariño</span>
     <p>
-      Ojalá estas flores te recuerden cuánto te quiero
-      y te hagan sentir un abrazo mío, incluso a la distancia. ❤️
+      Que estas flores te recuerden cuánto te quiero y te hagan sentir un abrazo mío, incluso a la distancia.
     </p>
-  </div>
+    </footer>
     <script src="anim.js"></script>
     <script src="main.js"></script>
   </body>
